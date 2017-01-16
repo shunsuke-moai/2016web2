@@ -35,7 +35,7 @@
  
 	        sprite1.addEventListener('touchstart', function() {
 	            sprite1.image = game.assets['kakkoii.png'];
-		    if(flag >= 0 && !flag1 && flag > 0)
+		    if(flag >= 0 && !flag1)
 		    {
 	                sprite1.image = game.assets['kakkoii.png'];
 		        flag += 1;
@@ -43,7 +43,7 @@
 		    }
 	        });
 	        sprite2.addEventListener('touchstart', function() {
-		    if(flag >= 0 && !flag2 && flag > 0)
+		    if(flag >= 0 && !flag2)
 		    {
 	                sprite2.image = game.assets['kakkoii.png'];
 		        flag += 1;
@@ -51,7 +51,7 @@
 		    }
 	        });
 	        sprite3.addEventListener('touchstart', function() {
-		    if(flag >= 0 && !flag3 && flag > 0)
+		    if(flag >= 0 && !flag3)
 		    {
 	                sprite3.image = game.assets['kakkoii.png'];
 		        flag += 1;
@@ -60,7 +60,10 @@
 	        });
 
 		game.addEventListener('enterframe', function () {
-		    sprite1.x+=Math.random() * 10 - 5;
+		    if(flag > 0)
+		    {
+		        sprite1.x+=Math.random() * 10 - 5;
+		    }
 		    if(sprite1.x < 0)
 		    {
 		    	sprite1.x = 0;
@@ -69,7 +72,10 @@
 		    {
 		    	sprite1.x = 260;
 		    }
-		    sprite1.y+=Math.random() * 10 - 5;
+		    if(flag > 0)
+		    {
+		        sprite1.y+=Math.random() * 10 - 5;
+		    }
 		    if(sprite1.y < 0)
 		    {
 		    	sprite1.y = 0;
@@ -79,7 +85,10 @@
 		    	sprite1.y = 260;
 		    }
 
-		    sprite2.x+=Math.random() * 10 - 5;
+		    if(flag > 0)
+		    {
+		        sprite2.x+=Math.random() * 10 - 5;
+		    }
 		    if(sprite2.x < 0)
 		    {
 		    	sprite2.x = 0;
@@ -88,7 +97,10 @@
 		    {
 		    	sprite2.x = 260;
 		    }
-		    sprite2.y+=Math.random() * 10 - 5;
+		    if(flag > 0)
+		    {
+		        sprite2.y+=Math.random() * 10 - 5;
+		    }
 		    if(sprite2.y < 0)
 		    {
 		    	sprite2.y = 0;
@@ -98,7 +110,10 @@
 		    	sprite2.y = 260;
 		    }
 
-		    sprite3.x+=Math.random() * 10 - 5;
+		    if(flag > 0)
+		    {
+		        sprite3.x+=Math.random() * 10 - 5;
+		    }
 		    if(sprite3.x < 0)
 		    {
 		    	sprite3.x = 0;
@@ -107,7 +122,10 @@
 		    {
 		    	sprite3.x = 260;
 		    }
-		    sprite3.y+=Math.random() * 10 - 5;
+		    if(flag > 0)
+		    {
+		        sprite3.x+=Math.random() * 10 - 5;
+		    }
 		    if(sprite3.y < 0)
 		    {
 		    	sprite3.y = 0;
