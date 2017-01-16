@@ -33,7 +33,7 @@
 		sprite3.y = 260;
 	        scene.addChild(sprite3);
  
-	        sprite1.addEventListener('touchstart', function() {
+	        sprite1.addEventListener('touchend', function() {
 	            sprite1.image = game.assets['kakkoii.png'];
 		    if(flag >= 0 && !flag1)
 		    {
@@ -42,7 +42,7 @@
 			flag1 = true;
 		    }
 	        });
-	        sprite2.addEventListener('touchstart', function() {
+	        sprite2.addEventListener('touchend', function() {
 		    if(flag >= 0 && !flag2)
 		    {
 	                sprite2.image = game.assets['kakkoii.png'];
@@ -50,7 +50,7 @@
 			flag2 = true;
 		    }
 	        });
-	        sprite3.addEventListener('touchstart', function() {
+	        sprite3.addEventListener('touchend', function() {
 		    if(flag >= 0 && !flag3)
 		    {
 	                sprite3.image = game.assets['kakkoii.png'];
@@ -60,7 +60,7 @@
 	        });
 
 		game.addEventListener('enterframe', function () {
-		    if(flag >= 0)
+		    if(flag1)
 		    {
 		        sprite1.x+=Math.random() * 10 - 5;
 		    }
@@ -72,7 +72,7 @@
 		    {
 		    	sprite1.x = 260;
 		    }
-		    if(flag >= 0)
+		    if(flag1)
 		    {
 		        sprite1.y+=Math.random() * 10 - 5;
 		    }
@@ -85,7 +85,7 @@
 		    	sprite1.y = 260;
 		    }
 
-		    if(flag >= 0)
+		    if(flag2)
 		    {
 		        sprite2.x+=Math.random() * 10 - 5;
 		    }
@@ -97,7 +97,7 @@
 		    {
 		    	sprite2.x = 260;
 		    }
-		    if(flag >= 0)
+		    if(flag2)
 		    {
 		        sprite2.y+=Math.random() * 10 - 5;
 		    }
@@ -110,7 +110,7 @@
 		    	sprite2.y = 260;
 		    }
 
-		    if(flag >= 0)
+		    if(flag3)
 		    {
 		        sprite3.x+=Math.random() * 10 - 5;
 		    }
@@ -122,7 +122,7 @@
 		    {
 		    	sprite3.x = 260;
 		    }
-		    if(flag >= 0)
+		    if(flag3)
 		    {
 		        sprite3.y+=Math.random() * 10 - 5;
 		    }
