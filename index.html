@@ -35,7 +35,7 @@
  
 	        sprite1.addEventListener('touchstart', function() {
 	            sprite1.image = game.assets['kakkoii.png'];
-		    if(flag >= 0 && !flag1)
+		    if(flag >= 0 && !flag1 && flag > 0)
 		    {
 	                sprite1.image = game.assets['kakkoii.png'];
 		        flag += 1;
@@ -43,7 +43,7 @@
 		    }
 	        });
 	        sprite2.addEventListener('touchstart', function() {
-		    if(flag >= 0 && !flag2)
+		    if(flag >= 0 && !flag2 && flag > 0)
 		    {
 	                sprite2.image = game.assets['kakkoii.png'];
 		        flag += 1;
@@ -51,7 +51,7 @@
 		    }
 	        });
 	        sprite3.addEventListener('touchstart', function() {
-		    if(flag >= 0 && !flag3)
+		    if(flag >= 0 && !flag3 && flag > 0)
 		    {
 	                sprite3.image = game.assets['kakkoii.png'];
 		        flag += 1;
